@@ -13,7 +13,7 @@ services:
     volumes:
       - mongodb_data:/data/db
     networks:
-      - mern-network
+      - red-cluster
     deploy:
       replicas: 1
       restart_policy:
@@ -39,7 +39,7 @@ services:
     ports:
       - "4000:4000"
     networks:
-      - mern-network
+      - red-cluster
     deploy:
       replicas: 2
       restart_policy:
@@ -62,7 +62,7 @@ services:
     ports:
       - "3000:80"
     networks:
-      - mern-network
+      - red-cluster
     deploy:
       replicas: 2
       restart_policy:
@@ -84,6 +84,5 @@ volumes:
     driver: local
 
 networks:
-  mern-network:
-    driver: overlay
-    attachable: true
+  red-cluster:
+    external: true
