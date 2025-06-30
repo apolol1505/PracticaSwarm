@@ -3,7 +3,7 @@ version: "3.8"
 services:
   # Base de datos MongoDB
   mongodb:
-    image: mongo:6.0
+    image: mongo:4.4
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: password123
