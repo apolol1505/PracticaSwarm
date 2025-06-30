@@ -31,7 +31,7 @@ services:
 
   # Backend API
   backend:
-    image: mernm-crud-backend:latest
+    image: mi-backend:latest
     environment:
       NODE_ENV: production
       PORT: 4000
@@ -58,7 +58,7 @@ services:
 
   # Frontend React
   frontend:
-    image: mernm-crud-frontend:latest
+    image: mi-frontend:latest
     ports:
       - "3000:80"
     networks:
