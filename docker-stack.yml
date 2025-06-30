@@ -31,7 +31,7 @@ services:
 
   # Backend API
   backend:
-    image: mi-backend:latest
+    image: practica-swarm-backend:latest
     environment:
       NODE_ENV: production
       PORT: 4000
@@ -58,7 +58,7 @@ services:
 
   # Frontend React
   frontend:
-    image: mi-frontend:latest
+    image: practica-swarm-frontend:latest
     ports:
       - "3000:80"
     networks:
